@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Metro Ticket</title>
+</head>
+<body>
+    <script>
+        let age = 66; 
+        let gender = 'Male'; 
+        let ticketPrice = 200; 
+
+        if (gender == 'female'){
+            ticketPrice = ticketPrice*50/100;
+        }else if(age <= 5){
+            ticketPrice = 0 + 'Your Ticket is Free'; 
+        }else if(age > 5 && age <= 8){
+            ticketPrice = ticketPrice / 2; 
+        }else if(age > 65){
+            let dis2 = ticketPrice * 30 / 100;
+            ticketPrice = ticketPrice-dis2  
+        }
+        console.log(ticketPrice);
+    </script>
+</body>
+</html>
