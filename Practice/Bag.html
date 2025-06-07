@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Bag.css">
+    <title>Myntra Bag</title>
+</head>
+<body>
+    <button class="addButton" onclick="
+        cartValue = cartValue + 1;
+        document.querySelector('#cart').innerText = `Your Bag has ${cartValue} items`">Add to Bag</button>
+
+    <button class="wishlist-item" onclick="
+    if(cartValue==0){
+            document.querySelector('#cart').innerText=`Oops! cart never show the -ve value`
+        }else{
+            cartValue--;
+            document.querySelector('#cart').innerText=`Your Bag has ${cartValue} items`
+        }; 
+     " >❤️ wishlist</button>
+    
+    <button class="addButton" onclick=" cartValue +=2; 
+    document.querySelector('#cart').innerText=`Your Bag has ${cartValue} items` ">Add 1+1 Items</button>
+    <h1 id="cart"></h1>
+    <script>
+        let cartValue = 0; 
+        function negativeValue(){
+            if(cartValue==0){
+            document.querySelector('#cart').innerText=`Oops! cart never show the -ve value`
+        }else{
+            cartValue--;
+        }
+        }
+    </script>
+</body>
+</html>
